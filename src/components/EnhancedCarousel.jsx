@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const carouselItems = [
   {
     id: 1,
     image:
-      "https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "/oil-well.png",
     title: "Nature's Beauty",
     description:
       "Experience the tranquility of nature's most beautiful landscapes.",
@@ -13,71 +13,75 @@ const carouselItems = [
   {
     id: 2,
     image:
-      "https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "/tools.png",
     title: "Urban Exploration",
     description: "Discover the hidden gems of bustling city life.",
   },
   {
     id: 3,
     image:
-      "https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "boom-lift.png",
     title: "Adventure Awaits",
     description: "Join us on exciting adventures and explore the unknown.",
   },
   {
     id: 4,
     image:
-      "https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "/robotic-arm.png",
     title: "Culinary Delights",
     description: "Savor the flavors of world cuisines and culinary arts.",
   },
 ];
 
 const EnhancedCarousel = () => {
-
-
+  const navigate=useNavigate();
+  const handleDiscoverMore=()=>{
+    navigate("/discover-more-2");
+  };
   return (
     <div className="relative w-full max-w-6xl mx-auto overflow-hidden">
-      <div
-        className="flex transition-transform duration-500 ease-in-out"
-      >
-        {/* Duplicate the items for the infinite scroll effect */}
+      <div className="flex">
+        {/* Display each card with a fixed height */}
         {carouselItems.map((item) => (
-          <div
-            key={item.id}
-            className="flex-shrink-0 w-1/4 px-2 transition-all duration-500 ease-in-out"
-          >
-            <div className="relative overflow-hidden rounded-lg shadow-lg group h-96">
+          <div key={item.id} className="flex-shrink-0 w-1/4 px-2 mb-5">
+            <div className="relative overflow-hidden rounded-lg shadow-lg h-[40vh] hover:shadow-xl hover:scale-105 transition-transform duration-300 p-5">
+              {/* Image with fixed height */}
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-[30%] object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-70 transition-opacity duration-500">
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-white text-2xl font-bold mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">
-                    {item.description}
-                  </p>
-                </div>
+              {/* Content below the image */}
+              <div className="pt-5 bg-white">
+                <h3 className="text-gray-800 text-2xl font-bold mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm">{item.description}</p>
               </div>
+              <button className="mt-6 text-blue-600 flex items-center" onClick={handleDiscoverMore}>
+              <span>DISCOVER MORE</span>
+              <svg
+                className="ml-2 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 12h14M12 5l7 7-7 7"
+                />
+              </svg>
+            </button>
             </div>
+            
           </div>
         ))}
       </div>
-
     </div>
   );
 };
 
 export default EnhancedCarousel;
-
-
-
-
-
-
-
-EnhancedCarousel

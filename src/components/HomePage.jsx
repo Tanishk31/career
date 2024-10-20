@@ -74,7 +74,8 @@ const queries = [
   {
     id: 7,
     question: "How can I apply for a job at Anvey?",
-    answer: "You can visit our Careers section on the website to see available positions. If you find a role that suits your skills, fill out our detailed application form, attach your resume, and submit it online. We are always on the lookout for passionate individuals who love the trade and are eager to make a difference in the oil and gas sector.",
+    answer:
+      "You can visit our Careers section on the website to see available positions. If you find a role that suits your skills, fill out our detailed application form, attach your resume, and submit it online. We are always on the lookout for passionate individuals who love the trade and are eager to make a difference in the oil and gas sector.",
   },
   {
     id: 8,
@@ -103,7 +104,6 @@ const HomePage = () => {
   const [isAboutVisible, setIsAboutVisible] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
   const aboutSectionRef = useRef(null);
-
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -267,14 +267,19 @@ const HomePage = () => {
           | Our Services
         </h1>
         <EnhancedCarousel />
-        <Link className="mx-auto mb-10 mt-20" to="/services">
+        <Link className="mx-auto mb-10" to="/services">
           <button className="text-white bg-blue-400 font-bold px-8 py-3  -mt-5 -mb-5 rounded-full text-lg border border-blue hover:bg-white/20 hover:text-blue-400 hover:border-blue-400 transition-colors duration-300 animate-slideInUp">
             View More
           </button>
         </Link>
       </div>
+      <div className="flex w-[75%] mx-auto flex-col gap-5 mt-10">
+        <h1 className="text-[40px] font-bold font-yaro animate-slideInLeft text-[#1D3D71]">
+          | Our Products
+        </h1>
+        <ImageAccordion />
+      </div>
 
-      <ImageAccordion />
       <CareerParallax />
       {/* Common Queries Section */}
       <div className="bg-white py-16">
@@ -299,7 +304,9 @@ const HomePage = () => {
             <div className="bg-blue-100 p-4 px-10 rounded-[50px] w-72 shadow-lg shadow-blue-100 text-center ">
               <FaMapMarkerAlt className="text-3xl text-sky-400 mb-4 mx-auto" />
               <h3 className="text-[19px] font-semibold mb-2">Address</h3>
-              <p className="text-[15px] font-normal -mt-2">15 A 1/3, SEPCO TOWNSHIP, Durgapur, WB-713205</p>
+              <p className="text-[15px] font-normal -mt-2">
+                15 A 1/3, SEPCO TOWNSHIP, Durgapur, WB-713205
+              </p>
             </div>
             <div className="bg-blue-100 p-4 px-10 rounded-[50px] w-72 shadow-lg  shadow-blue-100 text-center ">
               <FaEnvelope className="text-3xl text-sky-400 mb-4 mx-auto" />
@@ -309,7 +316,9 @@ const HomePage = () => {
             <div className="bg-blue-100 p-4 px-10 rounded-[50px] w-72 shadow-lg shadow-blue-100 text-center ">
               <FaPhoneAlt className="text-3xl text-sky-400 mb-4 mx-auto" />
               <h3 className="text-[19px] font-semibold mb-2">Phone</h3>
-              <p className="text-[15px] font-normal">+917060060039/ +917300534848</p>
+              <p className="text-[15px] font-normal">
+                +917060060039/ +917300534848
+              </p>
             </div>
           </div>
         </div>
