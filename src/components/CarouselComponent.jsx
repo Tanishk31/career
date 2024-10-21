@@ -2,6 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useNavigate } from "react-router-dom";
+
 
 const CarouselComponent = () => {
   const settings = {
@@ -13,40 +15,46 @@ const CarouselComponent = () => {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
+    const navigate = useNavigate();
+
+    const handleDiscoverMore=()=>{
+      navigate("/discover-more");
+    };
+  
 
   return (
     <div className="max-w-screen-lg mx-auto py-10">
+      <h2 className="text-4xl font-bold mb-4 text-center text-[#1D3D71] font-yaro">
+        Our Projects
+      </h2>
       <Slider {...settings}>
         {cardData.map((card, index) => (
           <div key={index} className="p-4">
-            <div className="bg-white shadow-md rounded-lg overflow-hidden h-full flex flex-col">
-              <img
-                src={card.imageUrl}
-                alt={`Card ${index + 1}`}
-                className="h-64 w-full object-cover"
-              />
-              <div className="p-6 flex-1 flex flex-col">
-                <h2 className="text-2xl font-bold mb-2 text-[#1D3D71]">{card.title}</h2>
-                <p className="mt-2 text-gray-600 flex-grow">
+            <div className="bg-white shadow-md rounded-lg overflow-hidden h-96 flex flex-col justify-between">
+              <div className="p-6 flex flex-col flex-grow">
+                <h2 className="font-bold text-[#1D3D71] text-lg mb-4">{card.title}</h2>
+                <p className="text-[#1D3D71] text-base flex-grow">
                   {card.description}
                 </p>
-                <button className="mt-4 text-blue-600 flex items-center">
-                  <span>DISCOVER MORE</span>
-                  <svg
-                    className="ml-2 w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 12h14M12 5l7 7-7 7"
-                    />
-                  </svg>
-                </button>
+                <div className="flex justify-center items-center mt-2">
+                  <button className="text-blue-600 flex items-center" onClick={handleDiscoverMore}>
+                    <span>DISCOVER MORE</span>
+                    <svg
+                      className="ml-2 w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 12h14M12 5l7 7-7 7"
+                      />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -104,26 +112,17 @@ function PrevArrow(props) {
 // Sample card data
 const cardData = [
   {
-    imageUrl: "/xx.jpeg",
-    title: "Innovative Marine Solutions",
-    description: "Advanced underwater technologies for exploration.",
+    title: "Anvey’s First Customized Plunger Lift Completion",
+    description: "A detailed account of our inaugural plunger lift system, tailored to client needs, delivering superior performance in well production. – Annexure1- Story & the Plunger lift catalogue and schematic of plunger-lift completion",
   },
   {
-    imageUrl: "/xx.jpeg",
-    title: "Renewable Energy Projects",
-    description: "Harnessing nature to power our future efficiently.",
+    title: "Successful Completion of a Mega Frac-Completion Campaign by Anvey",
+    description: "An in-depth look at how Anvey executed a large-scale frac-completion campaign, achieving significant milestones in hydrocarbon recovery. - Annexure 2- Story & the Hyma-Frac straddle tool catalogue",
   },
   {
-    imageUrl: "/xx.jpeg",
-    title: "Sustainable Resource Management",
-    description: "Minimizing waste while maximizing resource usage.",
-  },
-  {
-    imageUrl: "/xx.jpeg",
-    title: "Oceanic Environmental Studies",
-    description: "Researching ecosystems to protect marine biodiversity.",
+    title: "Anvey Develops Juggler: Cutting-Edge Sand Cleaning Technology in Collaboration with ONGC",
+    description: "Discover how Anvey, in partnership with ONGC, has developed Juggler—a revolutionary technology designed for effective sand cleaning in wellbores. -  Annexure 3- Story and catalogue",
   },
 ];
-
 
 export default CarouselComponent;

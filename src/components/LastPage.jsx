@@ -62,14 +62,14 @@ const LastPage = () => {
               Contact Us
             </h1>
             <p ref={para1Ref} className="text-[18px] font-normal">
-              Get in touch with us! We're here to answer your questions
+            We’d love to hear from you! Whether you have questions, need more information, or want to explore partnership opportunities, 
             </p>
-            <p ref={para2Ref} className="text-[18px] font-normal">and discuss how we can support your needs.</p>
+            <p ref={para2Ref} className="text-[18px] font-normal">feel free to reach out, and our team will be happy to assist. and discuss how we can support your needs.</p>
           </div>
 
           {/* Team Photo */}
           <div className="team-photo">
-            <img src="/xx.jpeg" alt="Team" className="team-image" />
+            <img src="/contactusbg.png" alt="Team" className="team-image" />
           </div>
 
           {/* Wavy Curve */}
@@ -88,7 +88,7 @@ const LastPage = () => {
         </div>
         </section>
 
-        <div className="flex justify-center items-center min-h-screen bg-white -mt-30">
+        <div className="flex justify-center items-center min-h-screen bg-white -mt-28">
           <div className="w-full max-w-6xl flex flex-col lg:flex-row justify-center items-center gap-12">
             {/* Contact Info Section */}
             <div
@@ -112,11 +112,11 @@ const LastPage = () => {
                     className="text-[#1D3D71] text-4xl mr-6 ml-6"
                   />
                   <div>
-                    <h2 className="text-[20px] font-bold text-gray-700">
+                    <h2 className="text-[20px] font-bold text-[#1D3D71]">
                       Email Address:
                     </h2>
-                    <p className="text-[15px] text-gray-600">domain@company.com</p>
-                    <p className="text-[15px] text-gray-600">xyz_info@domain.com</p>
+                    <p className="text-[15px] text-[#1D3D71]">Sales@anvey.in</p>
+                    <p className="text-[15px] text-[#1D3D71]">info@anvey.in</p>
                   </div>
                 </div>
                 <div className="border border-gray-300 p-4 rounded-3xl flex items-center">
@@ -125,14 +125,14 @@ const LastPage = () => {
                     className="text-[#1D3D71] text-4xl mr-6 ml-6"
                   />
                   <div>
-                    <h2 className="text-[20px] font-bold text-gray-700">
+                    <h2 className="text-[20px] font-bold text-[#1D3D71]">
                       Phone Numbers:
                     </h2>
-                    <p className="text-[15px] text-gray-600">
-                      Telephone No: +81-245-54896
+                    <p className="text-[15px] text-[#1D3D71]">
+                      Telephone No: +917300534848
                     </p>
-                    <p className="text-[15px] text-gray-600">
-                      Mobile No: +81-125-87965
+                    <p className="text-[15px] text-[#1D3D71]">
+                      Mobile No: +917060060039
                     </p>
                   </div>
                 </div>
@@ -149,7 +149,7 @@ const LastPage = () => {
                   <div className="flex flex-col">
                     <label
                       htmlFor="name"
-                      className="mb-2 text-lg font-semibold"
+                      className="mb-2 text-lg font-semibold text-[#1D3D71]"
                     >
                       Name
                     </label>
@@ -164,7 +164,7 @@ const LastPage = () => {
                   <div className="flex flex-col">
                     <label
                       htmlFor="email"
-                      className="mb-2 text-lg font-semibold"
+                      className="mb-2 text-lg font-semibold text-[#1D3D71]"
                     >
                       Email
                     </label>
@@ -181,7 +181,7 @@ const LastPage = () => {
                   <div className="flex flex-col">
                     <label
                       htmlFor="subject"
-                      className="mb-2 text-lg font-semibold"
+                      className="mb-2 text-lg font-semibold text-[#1D3D71]"
                     >
                       Subjects
                     </label>
@@ -196,7 +196,7 @@ const LastPage = () => {
                   <div className="flex flex-col">
                     <label
                       htmlFor="phone"
-                      className="mb-2 text-lg font-semibold"
+                      className="mb-2 text-lg font-semibold text-[#1D3D71]"
                     >
                       Phone No
                     </label>
@@ -212,7 +212,7 @@ const LastPage = () => {
                 <div className="flex flex-col">
                   <label
                     htmlFor="message"
-                    className="mb-2 text-lg font-semibold"
+                    className="mb-2 text-lg font-semibold text-[#1D3D71]"
                   >
                     Message
                   </label>

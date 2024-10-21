@@ -14,19 +14,15 @@ const CardComponent = () => {
     <div className="max-w-screen-lg mx-auto py-10 grid grid-cols-1 md:grid-cols-3 gap-4">
       {cardData.map((card, index) => (
         <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden h-[500px] flex flex-col">
-          <img
-            src={card.imageUrl}
-            alt={`Card ${index + 1}`}
-            className="h-64 w-full object-cover"
-          />
+          
           <div className="p-6 flex-1 flex flex-col">
-            <h2 className="text-2xl font-bold mb-2 text-[#1D3D71]">
+            <h2 className="text-xl font-bold mb-2 text-[#1D3D71]">
               {card.title}
             </h2>
-            <p className="mt-2 text-gray-600 flex-grow">
+            <p className="mt-2 text-[#1D3D71] flex-grow">
               {card.description}
             </p>
-            <button className="mt-4 text-blue-600 flex items-center" onClick={handleDiscoverMore}>
+            <button className="mt-2 text-blue-600 flex items-center" onClick={handleDiscoverMore}>
               <span>DISCOVER MORE</span>
               <svg
                 className="ml-2 w-4 h-4"
@@ -52,19 +48,16 @@ const CardComponent = () => {
 // Sample card data
 const cardData = [
   {
-    imageUrl: "/xx.jpeg",
-    title: "Innovative Marine Solutions",
-    description: "Advanced underwater technologies for exploration.",
+    title: "Anvey’s First Customized Plunger Lift Completion",
+    description: "A detailed account of our inaugural plunger lift system, tailored to client needs, delivering superior performance in well production. – Annexure1- Story & the Plunger lift catalogue and schematic of plunger-lift completion",
   },
   {
-    imageUrl: "/xx.jpeg",
-    title: "Renewable Energy Projects",
-    description: "Harnessing nature to power our future efficiently.",
+    title: "Successful Completion of a Mega Frac-Completion Campaign by Anvey",
+    description: "An in-depth look at how Anvey executed a large-scale frac-completion campaign, achieving significant milestones in hydrocarbon recovery. - Annexure 2- Story & the Hyma-Frac straddle tool catalogue.",
   },
   {
-    imageUrl: "/xx.jpeg",
-    title: "Sustainable Resource Management",
-    description: "Minimizing waste while maximizing resource usage.",
+    title: "Anvey Develops Juggler: Cutting-Edge Sand Cleaning Technology in Collaboration with ONGC",
+    description: "Discover how Anvey, in partnership with ONGC, has developed Juggler—a revolutionary technology designed for effective sand cleaning in wellbores. -  Annexure 3- Story and catalogue",
   },
   
 ];

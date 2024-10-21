@@ -253,11 +253,11 @@ const HomePage = () => {
               </Link>
             </div>
           </AnimatedSection>
-          <div className="w-full">
+          <div className="w-full ">
             <img
-              src="https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+              src="/Aboutusimage.png"
               alt="About Us"
-              className="w-full rounded-lg"
+              className="w-full rounded-lg mt-8"
             />
           </div>
         </div>
@@ -268,14 +268,14 @@ const HomePage = () => {
         </h1>
         <EnhancedCarousel />
         <Link className="mx-auto mb-10" to="/services">
-          <button className="text-white bg-blue-400 font-bold px-8 py-3  -mt-5 -mb-5 rounded-full text-lg border border-blue hover:bg-white/20 hover:text-blue-400 hover:border-blue-400 transition-colors duration-300 animate-slideInUp">
+          <button className="text-white bg-blue-400 font-bold px-8 py-3 -mb-5 rounded-full text-lg border border-blue hover:bg-white/20 hover:text-blue-400 hover:border-blue-400 transition-colors duration-300 animate-slideInUp">
             View More
           </button>
         </Link>
       </div>
       <div className="flex w-[75%] mx-auto flex-col gap-5 mt-10">
         <h1 className="text-[40px] font-bold font-yaro animate-slideInLeft text-[#1D3D71]">
-          | Our Products
+          | Our Projects
         </h1>
         <ImageAccordion />
       </div>
@@ -295,7 +295,7 @@ const HomePage = () => {
         </div>
       </div>
       {/* Contact Section */}
-      <div className="bg-white -mt-6">
+      <div className="bg-white -mt-6 mb-7">
         <div className="mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-navy-900 font-yaro text-[#1D3D71] -mt-24">
             Still have doubts? Let's Get In Touch

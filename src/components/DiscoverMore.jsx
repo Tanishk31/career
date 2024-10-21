@@ -7,7 +7,7 @@ function DiscoverMore() {
         {/* Text Section */}
         <div className="w-[50%] ">
           <h1 className="text-5xl font-bold mb-4 text-[#1D3D71] animate-fadeInUp">
-            Explore Our Product
+            Explore Our Projects
           </h1>
           <div className="animate-fadeInUp delay-100">
             <p className="text-lg mb-4 leading-relaxed">

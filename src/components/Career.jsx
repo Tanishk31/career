@@ -27,7 +27,7 @@ const Career = () => {
         <div
           className="absolute inset-0 bg-cover bg-center z-0"
           style={{
-            backgroundImage: `url('/xx.jpeg')`,
+            backgroundImage: `url('/Handshake.jpg')`,
             filter: "brightness(60%)",
           }}
         />

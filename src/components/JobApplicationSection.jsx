@@ -29,17 +29,12 @@ const JobCard = ({ title, type, description, buttonColor }) => {
   return (
     <AnimatedSection className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
       <div className="flex items-center mb-2">
-        <Clock className="w-4 h-4 mr-2 text-gray-500" />
-        <p className="text-sm text-gray-500">{type}</p>
+        <Clock className="w-4 h-4 mr-2 text-[#1D3D71]" />
+        <p className="text-sm text-[#1D3D71]">{type}</p>
       </div>
-      <h3 className="text-xl font-semibold mb-2 text-gray-800">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <button
-        className={`px-4 py-2 rounded-full text-white ${buttonColor} transition-colors duration-300 flex items-center justify-center`}
-      >
-        <Briefcase className="w-4 h-4 mr-2 " />
-        APPLY NOW
-      </button>
+      <h3 className="text-xl font-semibold mb-2 text-[#1D3D71]">{title}</h3>
+      <p className="text-[#1D3D71] mb-4">{description}</p>
+      
     </AnimatedSection>
   );
 };
@@ -78,40 +73,40 @@ const JobApplicationSection = () => {
 
   return (
     <section className="bg-white py-16">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4 -mt-14">
         <AnimatedSection className="text-center mb-16">
           <h2 className="text-4xl font-bold font-yaro text-[#1D3D71] mb-4">
             What Sets Us Apart
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-[#1D3D71] max-w-2xl mx-auto">
             Discover why joining our team is a great choice for your career
           </p>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <AnimatedSection className="bg-white p-6 rounded-lg shadow-2xl hover:shadow-lg transition-shadow duration-300">
-            <h3 className="text-xl font-semibold mb-2 text-gray-800">
+          <AnimatedSection className="bg-white p-6 rounded-md shadow-lg hover:shadow-md  duration-300">
+            <h3 className="text-xl font-semibold mb-2 text-[#1D3D71]">
               Professional Growth
             </h3>
-            <p className="text-gray-600">
+            <p className="text-[#1D3D71]">
               We invest in your development with ongoing training and mentorship
               programs.
             </p>
           </AnimatedSection>
           <AnimatedSection className="bg-white p-6 rounded-lg shadow-2xl hover:shadow-lg transition-shadow duration-300">
-            <h3 className="text-xl font-semibold mb-2 text-gray-800">
+            <h3 className="text-xl font-semibold mb-2 text-[#1D3D71]">
               Work-Life Balance
             </h3>
-            <p className="text-gray-600">
+            <p className="text-[#1D3D71]">
               Enjoy flexible schedules and a supportive environment that values
               your well-being.
             </p>
           </AnimatedSection>
           <AnimatedSection className="bg-white p-6 rounded-lg shadow-2xl hover:shadow-lg transition-shadow duration-300">
-            <h3 className="text-xl font-semibold mb-2 text-gray-800">
+            <h3 className="text-xl font-semibold mb-2 text-[#1D3D71]">
               Innovative Projects
             </h3>
-            <p className="text-gray-600">
+            <p className="text-[#1D3D71]">
               Work on cutting-edge projects that make a real difference in
               people's lives.
             </p>
@@ -137,7 +132,7 @@ const JobApplicationSection = () => {
           </div>
 
           <AnimatedSection className="bg-white p-8 rounded-lg shadow-md">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-800">
+            <h3 className="text-2xl font-semibold mb-6 text-[#1D3D71]">
               Join Our Team
             </h3>
             <form className="space-y-4">
@@ -184,28 +179,28 @@ const JobApplicationSection = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <AnimatedSection className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-semibold mb-2 text-gray-800">
+              <h3 className="text-xl font-semibold mb-2 text-[#1D3D71]">
                 Collaborative Environment
               </h3>
-              <p className="text-gray-600">
+              <p className="text-[#1D3D71]">
                 Work alongside passionate individuals who inspire and support
                 each other.
               </p>
             </AnimatedSection>
             <AnimatedSection className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-semibold mb-2 text-gray-800">
+              <h3 className="text-xl font-semibold mb-2 text-[#1D3D71]">
                 Skill Development
               </h3>
-              <p className="text-gray-600">
+              <p className="text-[#1D3D71]">
                 Access to resources and training that help you develop new
                 skills and advance your career.
               </p>
             </AnimatedSection>
             <AnimatedSection className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-semibold mb-2 text-gray-800">
+              <h3 className="text-xl font-semibold mb-2 text-[#1D3D71]">
                 Impactful Work
               </h3>
-              <p className="text-gray-600">
+              <p className="text-[#1D3D71]">
                 Be part of projects that positively impact the community and the
                 environment.
               </p>

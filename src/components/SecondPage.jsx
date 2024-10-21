@@ -4,6 +4,7 @@ import { services, capabilities, projects, products } from "../../data.js"; // A
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import CarouselComponent from "./CarouselComponent.jsx"; // Import the carousel component
+import { useNavigate } from "react-router-dom";
 
 const SecondPage = () => {
   // Animation variants
@@ -64,7 +65,7 @@ const SecondPage = () => {
         className="relative h-screen -mt-10 flex items-center justify-center bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')",
+            "url('/servicesbg.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-blue-500 opacity-60"></div>
@@ -83,18 +84,19 @@ const SecondPage = () => {
 
         </motion.div>
         <div className="wave-container">
-          <svg
-            className="wave"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-          >
-            <path
-              fill="#ffffff"
-              fillOpacity="1"
-              d="M0,240L48,230C96,220,192,200,288,185C384,170,480,160,576,170C672,180,768,210,864,210C960,210,1056,190,1152,180C1248,170,1344,170,1392,170L1440,170L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-            ></path>
-          </svg>
-        </div>
+  <svg
+    className="wave"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 320"
+    style={{ marginTop: '40px' }} // Adjust this value as needed
+  >
+    <path
+      fill="#ffffff"
+      fillOpacity="1"
+      d="M0,240L48,230C96,220,192,200,288,185C384,170,480,160,576,170C672,180,768,210,864,210C960,210,1056,190,1152,180C1248,170,1344,170,1392,170L1440,170L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+    ></path>
+  </svg>
+</div>
 
 
 
@@ -109,26 +111,26 @@ const SecondPage = () => {
         animate={servicesInView ? "visible" : "hidden"}
         variants={fadeInDown} // Come from down
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto -mt-14 px-4">
           <h2 className="text-4xl font-bold mb-4 text-center text-[#1D3D71] font-yaro">
             Services
           </h2>
           <p className="text-lg text-center mb-12 text-[#1D3D71]">
             Comprehensive services tailored to your needs
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-[#1D3D71]">
             {services.map((product, index) => (
               <motion.div
                 key={index}
-                className="bg-gray-200 rounded-3xl shadow-md hover:shadow-xl transition-all duration-300"
+                className="bg-[#00B3FF26] rounded-3xl shadow-md hover:shadow-xl transition-all text-[#1D3D71] duration-300"
                 whileHover={{ scale: 1.05 }} // Adds a hover effect
                 variants={index % 2 === 0 ? slideFromLeft : slideFromRight}
               >
-              <Star size={64} className="pl-4 pt-4" color="#1D3D71" fill />
+                <Star size={64} className="pl-4 pt-4" color="#1D3D71" fill />
                 <h3 className="text-lg p-4 font-bold mb-2 text-[#1D3D71]">
                   {product.title}
                 </h3>
-                <p className="px-6 text-sm font-montserrat text-gray-600 mb-24">{product.description}</p>
+                <p className="px-6 text-sm font-montserrat text-[#1D3D71] mb-24">{product.description}</p>
                 <button className="px-6 ml-6 py-2 font-bold bottom-10 absolute border-2 rounded-full border-[#1D3D71] text-[#1D3D71] p">Learn More</button>
               </motion.div>
             ))}
@@ -150,19 +152,19 @@ const SecondPage = () => {
           <p className="text-xl text-center mb-12 text-[#1D3D71]">
             Delivering excellence through expertise and innovation
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-36">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-36 text-[#1D3D71]">
             {capabilities.map((capability, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-3 rounded-3xl shadow-lg transition"
+                className="bg-white p-3 rounded-3xl shadow-lg transition text-[#1D3D71]"
                 variants={index < 3 ? slideFromLeft : slideFromRight} // First 3 from left, rest from right
                 animate={capabilitiesInView ? "visible" : "hidden"}
               >
-                <capability.icon className="w-16 h-16 mb-4 text-[#00B3FF]" />
+                <capability.icon className="w-16 h-16 mb-4 text-[#1D3D71]" />
                 <h3 className="text-2xl font-semibold mb-2 text-[#1D3D71] ">
                   {capability.title}
                 </h3>
-                <p className="mb-4 text-gray-700">{capability.description}</p>
+                <p className="mb-4 text-[#1D3D71]">{capability.description}</p>
               </motion.div>
             ))}
           </div>
@@ -183,11 +185,11 @@ const SecondPage = () => {
           <p className="text-xl text-center mb-12 text-gray-600">
             Explore our innovative product offerings
           </p>
-          <div className="mx-auto w-[90%] grid grid-cols-1 md:grid-cols-3 gap-4 px-36">
+          <div className="mx-auto w-[90%] grid grid-cols-1 md:grid-cols-3 gap-4 px-36 ">
             {products.map((product, index) => (
               <motion.div
                 key={index}
-                className="rounded-3xl mx-auto w-[90%] bg-gray-200 shadow-md hover:shadow-xl transition-all duration-300"
+                className="rounded-3xl mx-auto w-[90%] bg-[#00B3FF26] shadow-md hover:shadow-xl transition-all duration-300"
                 whileHover={{ scale: 1.05 }} // Adds a hover effect
                 variants={index % 2 === 0 ? slideFromLeft : slideFromRight}
               >
@@ -200,7 +202,7 @@ const SecondPage = () => {
                 <h3 className=" text-2xl px-6 py-2 font-semibold mb-2 text-[#1D3D71]">
                   {product.title}
                 </h3>
-                <p className="px-6 pb-6 text-gray-600">{product.description}</p>
+                <p className="px-6 pb-6 text-[#1D3D71]">{product.description}</p>
               </motion.div>
             ))}
           </div>
