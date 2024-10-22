@@ -23,7 +23,7 @@ const CommonQueries = ({ queries }) => {
           <div key={query.id} className="text-left border-b-2 border-black p-3">
             <button
               onClick={() => toggleQuery(index)}
-              className="w-full text-left text-lg font-semibold h-10 mb-2 flex justify-between items-center"
+              className="w-full text-left text-[#1D3D71] text-lg font-semibold h-10 mb-2 flex justify-between items-center"
             >
               <span>
                 {query.id}. {query.question}
@@ -31,7 +31,7 @@ const CommonQueries = ({ queries }) => {
               <span>{activeIndices[index] ? "▲" : "▶"}</span>
             </button>
             <div
-              className={`transition-all duration-500 overflow-hidden ${
+              className={`transition-all duration-500 text-[#1D3D71] overflow-hidden ${
                 activeIndices[index]
                   ? "max-h-[1000px] opacity-100"
                   : "max-h-0 opacity-0"

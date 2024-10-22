@@ -117,7 +117,7 @@ const JobApplicationSection = () => {
           <h2 className="text-4xl font-bold font-yaro text-[#1D3D71] mb-4">
             Let's Join With Us!
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-[#1D3D71] max-w-2xl mx-auto">
             Be part of a team that values innovation, sustainability, and
             personal growth. Together, we can create beautiful spaces and
             meaningful experiences.

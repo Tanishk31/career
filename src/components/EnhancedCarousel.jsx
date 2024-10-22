@@ -39,42 +39,54 @@ const EnhancedCarousel = () => {
   };
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto overflow-hidden">
-      <div className="flex">
+    <div className="relative w-full max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {carouselItems.map((item) => (
-          <div key={item.id} className="flex-shrink-0 w-1/4 px-2 mb-5 h-[65vh]">
-          <div className="relative overflow-hidden rounded-lg shadow-lg h-[100%] hover:shadow-xl hover:scale-105 transition-transform duration-300 p-5">
-            {/* Image with fixed height */}
-            <img
-              src={item.image}
-              alt={item.title}
-              className="w-[30%] object-cover"
-            />
-              {/* Content */}
-              <div className="flex flex-col justify-between flex-grow">
-                <h3 className="text-[#1D3D71] text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-[#1D3D71] text-sm mb-4">{item.description}</p>
-                <button
-                  className=" text-blue-500 bottom-0 absolute font-lg py-5 px-2 rounded flex items-center justify-center mt-5"
-                  onClick={handleDiscoverMore}
+          <div
+            key={item.id}
+            className="bg-white shadow-lg rounded-lg flex flex-col justify-between h-[100%] p-6"
+          >
+            {/* Image */}
+            <div className="flex justify-center mb-4">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-16 h-16 object-contain"
+              />
+            </div>
+
+            {/* Title */}
+            <h3 className="text-[#1D3D71] text-xl font-bold text-center mb-2">
+              {item.title}
+            </h3>
+
+            {/* Description */}
+            <p className="text-[#1D3D71] text-sm text-center flex-grow">
+              {item.description}
+            </p>
+
+            {/* Discover More Button */}
+            <div className="mt-4 flex justify-center">
+              <button
+                className="text-blue-600 font-normal py-2 px-4 rounded-lg flex items-center hover:underline"
+                onClick={handleDiscoverMore}
+              >
+                <span>DISCOVER MORE</span>
+                <svg
+                  className="ml-2 w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <span>DISCOVER MORE</span>
-                  <svg
-                    className="ml-2 w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 12h14M12 5l7 7-7 7"
-                    />
-                  </svg>
-                </button>
-              </div>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 12h14M12 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         ))}

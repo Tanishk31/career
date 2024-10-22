@@ -238,7 +238,7 @@ const HomePage = () => {
               <h2 className="text-[30px] text-[#1D3D71] font-bold mb-6 text-navy-900 font-yaro">
                 About Us
               </h2>
-              <p className="text-[17px] leading-[27px] font-medium mb-5 ">
+              <p className="text-[17px] text-[#1D3D71] leading-[27px] font-medium mb-5 ">
                 Founded in 2022, we at Anvey are dedicated to delivering
                 innovative engineering solutions. Specializing in cutting-edge
                 technologies such as stimulation tools, artificial lift systems,
@@ -287,7 +287,7 @@ const HomePage = () => {
           <h2 className="text-5xl text-left font-bold mb-10 text-[#1D3D71] font-yaro">
             Common Queries
           </h2>
-          <p className="text-xl text-left mb-8">
+          <p className="text-xl text-left mb-8 text-[#1D3D71]">
             Your Answers to Common Questions
           </p>
 
@@ -302,21 +302,21 @@ const HomePage = () => {
           </h2>
           <div className="flex justify-center space-x-16">
             <div className="bg-blue-100 p-4 px-10 rounded-[50px] w-72 shadow-lg shadow-blue-100 text-center ">
-              <FaMapMarkerAlt className="text-3xl text-sky-400 mb-4 mx-auto" />
-              <h3 className="text-[19px] font-semibold mb-2">Address</h3>
-              <p className="text-[15px] font-normal -mt-2">
+              <FaMapMarkerAlt className="text-3xl text-[#1D3D71] mb-4 mx-auto" />
+              <h3 className="text-[19px] text-[#1D3D71] font-semibold mb-2">Address</h3>
+              <p className="text-[15px] text-[#1D3D71] font-normal -mt-2">
                 15 A 1/3, SEPCO TOWNSHIP, Durgapur, WB-713205
               </p>
             </div>
             <div className="bg-blue-100 p-4 px-10 rounded-[50px] w-72 shadow-lg  shadow-blue-100 text-center ">
-              <FaEnvelope className="text-3xl text-sky-400 mb-4 mx-auto" />
-              <h3 className="text-[19px] font-semibold mb-2">Email</h3>
-              <p className="text-[15px] font-normal">Sales@anvey.in</p>
+              <FaEnvelope className="text-3xl text-[#1D3D71] mb-4 mx-auto" />
+              <h3 className="text-[19px] text-[#1D3D71] font-semibold mb-2">Email</h3>
+              <p className="text-[15px] text-[#1D3D71] font-normal">Sales@anvey.in</p>
             </div>
             <div className="bg-blue-100 p-4 px-10 rounded-[50px] w-72 shadow-lg shadow-blue-100 text-center ">
-              <FaPhoneAlt className="text-3xl text-sky-400 mb-4 mx-auto" />
-              <h3 className="text-[19px] font-semibold mb-2">Phone</h3>
-              <p className="text-[15px] font-normal">
+              <FaPhoneAlt className="text-3xl text-[#1D3D71] mb-4 mx-auto" />
+              <h3 className="text-[19px] text-[#1D3D71] font-semibold mb-2">Phone</h3>
+              <p className="text-[15px] text-[#1D3D71] font-normal">
                 +917060060039/ +917300534848
               </p>
             </div>

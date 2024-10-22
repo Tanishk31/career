@@ -153,7 +153,7 @@ const About = () => {
               variants={staggerChildren}
             >
               <motion.div
-                className="bg-[#00B3FF26] text-black p-3 rounded-3xl shadow-lg"
+                className="bg-[#00B3FF26] text-black p-3 rounded-3xl shadow-sm"
                 variants={slideInFromLeft} // Left card slides in from the left
                 whileHover={{ scale: 1.05, border: 2,}}
               >
@@ -165,7 +165,7 @@ const About = () => {
                 </p>
               </motion.div>
               <motion.div
-                className="bg-[#00B3FF26] text-black p-3 rounded-3xl shadow-lg"
+                className="bg-[#00B3FF26] text-black p-3 rounded-3xl shadow-sm"
                 variants={fadeInFromBottom} // Middle card slides in from bottom
                 whileHover={{ scale: 1.05 }}
               >
@@ -177,7 +177,7 @@ const About = () => {
                 </p>
               </motion.div>
               <motion.div
-                className="bg-[#00B3FF26] text-black p-3 rounded-3xl shadow-lg"
+                className="bg-[#00B3FF26] text-black p-3 rounded-3xl shadow-sm"
                 variants={fadeInFromRight} // Right card slides in from the right
                 whileHover={{ scale: 1.05 }}
               >

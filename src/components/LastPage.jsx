@@ -62,9 +62,9 @@ const LastPage = () => {
               Contact Us
             </h1>
             <p ref={para1Ref} className="text-[18px] font-normal">
-            We’d love to hear from you! Whether you have questions, need more information, or want to explore partnership opportunities, 
+            Get in touch with us! We’re here to answer your questions 
             </p>
-            <p ref={para2Ref} className="text-[18px] font-normal">feel free to reach out, and our team will be happy to assist. and discuss how we can support your needs.</p>
+            <p ref={para2Ref} className="text-[18px] font-normal">and discuss how we can support your needs.</p>
           </div>
 
           {/* Team Photo */}
@@ -88,7 +88,7 @@ const LastPage = () => {
         </div>
         </section>
 
-        <div className="flex justify-center items-center min-h-screen bg-white -mt-28">
+        <div className="flex justify-center items-center min-h-screen bg-white -mt-22">
           <div className="w-full max-w-6xl flex flex-col lg:flex-row justify-center items-center gap-12">
             {/* Contact Info Section */}
             <div
@@ -100,9 +100,7 @@ const LastPage = () => {
                   Contact Us For More Info About Us!
                 </h1>
                 <p className="text-[16px] font-medium  text-[#1D3D71] mb-8">
-                  Vivamus morbi praesentium habitasse voluptatibus ad.
-                  Fringilla, adipiscing proident, tristique, et risus aliqua
-                  sunt. Maiores cursus fusce nisi pulvinar metus.
+                We’d love to hear from you! Whether you have questions, need more information, or want to explore partnership opportunities, feel free to reach out, and our team will be happy to assist. and discuss how we can support your needs.
                 </p>
               </div>
               <div>

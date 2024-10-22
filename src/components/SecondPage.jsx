@@ -68,7 +68,7 @@ const SecondPage = () => {
             "url('/servicesbg.jpg')",
         }}
       >
-        <div className="absolute inset-0 bg-blue-500 opacity-60"></div>
+        <div className="absolute inset-0 bg-blue-500 opacity-50"></div>
         <motion.div
           className="relative z-10 text-center text-white"
           initial="hidden"
@@ -84,19 +84,19 @@ const SecondPage = () => {
 
         </motion.div>
         <div className="wave-container">
-  <svg
-    className="wave"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 1440 320"
-    style={{ marginTop: '40px' }} // Adjust this value as needed
-  >
-    <path
-      fill="#ffffff"
-      fillOpacity="1"
-      d="M0,240L48,230C96,220,192,200,288,185C384,170,480,160,576,170C672,180,768,210,864,210C960,210,1056,190,1152,180C1248,170,1344,170,1392,170L1440,170L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-    ></path>
-  </svg>
-</div>
+          <svg
+            className="wave"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+            style={{ marginTop: '40px' }} // Adjust this value as needed
+          >
+            <path
+              fill="#ffffff"
+              fillOpacity="1"
+              d="M0,240L48,230C96,220,192,200,288,185C384,170,480,160,576,170C672,180,768,210,864,210C960,210,1056,190,1152,180C1248,170,1344,170,1392,170L1440,170L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
 
 
 
@@ -118,25 +118,47 @@ const SecondPage = () => {
           <p className="text-lg text-center mb-12 text-[#1D3D71]">
             Comprehensive services tailored to your needs
           </p>
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-[#1D3D71]">
-            {services.map((product, index) => (
-              <motion.div
-                key={index}
-                className="bg-[#00B3FF26] rounded-3xl shadow-md hover:shadow-xl transition-all text-[#1D3D71] duration-300"
-                whileHover={{ scale: 1.05 }} // Adds a hover effect
-                variants={index % 2 === 0 ? slideFromLeft : slideFromRight}
-              >
-                <Star size={64} className="pl-4 pt-4" color="#1D3D71" fill />
-                <h3 className="text-lg p-4 font-bold mb-2 text-[#1D3D71]">
-                  {product.title}
-                </h3>
-                <p className="px-6 text-sm font-montserrat text-[#1D3D71] mb-24">{product.description}</p>
-                <button className="px-6 ml-6 py-2 font-bold bottom-10 absolute border-2 rounded-full border-[#1D3D71] text-[#1D3D71] p">Learn More</button>
-              </motion.div>
-            ))}
+            {services.map((product, index) => {
+              // Define specific icons for each service card
+              const icons = [
+                "/oil-well.png", // Icon for first service
+                "/tools.png", // Icon for second service
+                "/boom-lift.png", // Icon for third service
+                "/robotic-arm.png"  // Icon for fourth service
+              ];
+
+              return (
+                <motion.div
+                  key={index}
+                  className="bg-blue-50 rounded-3xl shadow-md hover:shadow-xl transition-all text-[#1D3D71] duration-300"
+                  whileHover={{ scale: 1.05 }} // Adds a hover effect
+                  variants={index % 2 === 0 ? slideFromLeft : slideFromRight}
+                >
+                  <img
+                    src={icons[index]} // Use the specific icon based on index
+                    alt={product.title}
+                    className="pl-4 pt-4 w-16 h-16"
+                  />
+                  <h3 className="text-lg p-4 font-bold mb-2 text-[#1D3D71]">
+                    {product.title}
+                  </h3>
+                  <p className="px-6 text-sm font-montserrat text-[#1D3D71] mb-24">
+                    {product.description}
+                  </p>
+                  <button className="px-6 ml-6 py-2 font-bold bottom-10 absolute border-2 rounded-full border-[#1D3D71] text-[#1D3D71] p">
+                    Learn More
+                  </button>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
+
       </motion.section>
+
+
       {/* Capabilities Section */}
       <motion.section
         ref={capabilitiesRef}
@@ -160,7 +182,7 @@ const SecondPage = () => {
                 variants={index < 3 ? slideFromLeft : slideFromRight} // First 3 from left, rest from right
                 animate={capabilitiesInView ? "visible" : "hidden"}
               >
-                <capability.icon className="w-16 h-16 mb-4 text-[#1D3D71]" />
+                <capability.icon className="w-10 h-10 mb-4 text-[#1D3D71]" />
                 <h3 className="text-2xl font-semibold mb-2 text-[#1D3D71] ">
                   {capability.title}
                 </h3>
@@ -178,18 +200,18 @@ const SecondPage = () => {
         animate={productsInView ? "visible" : "hidden"}
         variants={fadeInUp}
       >
-        <div className=" mx-auto px-4">
+        <div className=" mx-auto px-6">
           <h2 className="text-4xl font-bold mb-4 text-center text-[#1D3D71] font-yaro">
             Our Products
           </h2>
-          <p className="text-xl text-center mb-12 text-gray-600">
+          <p className="text-xl text-center mb-10 text-gray-600">
             Explore our innovative product offerings
           </p>
-          <div className="mx-auto w-[90%] grid grid-cols-1 md:grid-cols-3 gap-4 px-36 ">
+          <div className="mx-auto w-[90%] grid grid-cols-1 md:grid-cols-3 gap-x-1 gap-y-9 px-36 ">
             {products.map((product, index) => (
               <motion.div
                 key={index}
-                className="rounded-3xl mx-auto w-[90%] bg-[#00B3FF26] shadow-md hover:shadow-xl transition-all duration-300"
+                className="rounded-3xl mx-auto w-[90%] bg-blue-50 shadow-md hover:shadow-xl transition-all duration-300"
                 whileHover={{ scale: 1.05 }} // Adds a hover effect
                 variants={index % 2 === 0 ? slideFromLeft : slideFromRight}
               >
@@ -207,6 +229,7 @@ const SecondPage = () => {
             ))}
           </div>
         </div>
+
       </motion.section>
       {/* Carousel Section */}
       <CarouselComponent /> {/* Add the Carousel component here */}
@@ -218,7 +241,7 @@ const SecondPage = () => {
         animate={downloadInView ? "visible" : "hidden"}
         variants={fadeInUp}
       >
-        <div className="container mx-auto justify-center px-0">
+        <div className="container mx-auto justify-center w-full">
           <h2 className=" underline-title-d mx-auto text-4xl font-bold mb-8 text-center text-[#1D3D71] font-yaro">
             Download
           </h2>
@@ -250,7 +273,7 @@ const SecondPage = () => {
               </button>
             </div>
             {/* Third Card */}
-            <div className=" rounded-tr-2xl bg-green-500 shadow-lg p-8 flex-1 mb-0">
+            <div className=" bg-green-500 shadow-lg p-8 flex-1 mb-0">
               <h3 className="text-3xl font-semibold mb-4 text-white">
                 Sustainability & Environmental Impact Report
               </h3>
@@ -259,6 +282,20 @@ const SecondPage = () => {
                 projects.
               </p>
               <button className="bg-white text-green-600 px-4 py-2 rounded-lg transition duration-300 hover:bg-gray-100">
+                <Download className="w-5 h-5 inline-block mr-2" />
+                Download
+              </button>
+            </div>
+            {/* fourth Card */}
+            <div className=" rounded-tr-2xl bg-yellow-500 shadow-lg p-8 flex-1 mb-0">
+              <h3 className="text-3xl font-semibold mb-4 text-white">
+                Environmental & Sustainability Impact Report
+              </h3>
+              <p className="mb-4 text-white">
+                our environmental initiatives and sustainability
+                projects.
+              </p>
+              <button className="bg-white text-yellow-600 px-4 py-2 rounded-lg transition duration-300 hover:bg-gray-100">
                 <Download className="w-5 h-5 inline-block mr-2" />
                 Download
               </button>

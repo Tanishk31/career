@@ -22,7 +22,7 @@ const CareerParallax = () => {
       <div
         className="absolute top-0 left-0 w-full h-full bg-center bg-cover rounded-t-[50%] mt-36 scale-x-[1.5]"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')`,
+          backgroundImage: `url('/Handshake.jpg')`,
         }}
       />
       {/* Content */}
