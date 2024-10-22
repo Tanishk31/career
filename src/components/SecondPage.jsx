@@ -57,6 +57,10 @@ const SecondPage = () => {
       block: "start",
     });
   };
+  const navigate=useNavigate();
+  const handleDiscoverMore = () => {
+    navigate("/discover-more-2");
+  };
 
   return (
     <div className="font-sans bg-gray-50">
@@ -147,7 +151,8 @@ const SecondPage = () => {
                   <p className="px-6 text-sm font-montserrat text-[#1D3D71] mb-24">
                     {product.description}
                   </p>
-                  <button className="px-6 ml-6 py-2 font-bold bottom-10 absolute border-2 rounded-full border-[#1D3D71] text-[#1D3D71] p">
+                  <button onClick={handleDiscoverMore} className="px-6 ml-6 py-2 font-bold bottom-10 absolute border-2 rounded-full border-[#1D3D71] text-[#1D3D71] hover:bg-[#1D3D71] hover:text-white transition-colors duration-300 ease-in-out"
+                  >
                     Learn More
                   </button>
                 </motion.div>
