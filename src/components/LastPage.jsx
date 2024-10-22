@@ -88,7 +88,7 @@ const LastPage = () => {
         </div>
         </section>
 
-        <div className="flex justify-center items-center min-h-screen bg-white -mt-22">
+        <div className="flex justify-center items-center min-h-screen bg-white -mt-24">
           <div className="w-full max-w-6xl flex flex-col lg:flex-row justify-center items-center gap-12">
             {/* Contact Info Section */}
             <div

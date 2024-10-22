@@ -18,8 +18,8 @@ const Navbar = () => {
         <NavLink to="/services">Services</NavLink>
       </main>
       <div className="flex text-2xl items-center justify-center gap-4">
-        <div className="border-2 rounded-full p-2 border-[#1D3D71] cursor-pointer">
-          <FaLinkedin />
+        <div className="border-2 rounded-full p-2 border-[#1D3D71] -mr-2 cursor-pointer">
+          <img src="linkedin.svg" alt="LinkedIn Icon" className="h-5 w-10" />
         </div>
         <div className="border-2 text-nowrap text-sm font-bold text-center cursor-pointer rounded-full p-2 px-6 mr-2 border-[#1D3D71]">
           Contact Us

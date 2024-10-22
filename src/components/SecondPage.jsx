@@ -57,7 +57,7 @@ const SecondPage = () => {
       block: "start",
     });
   };
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const handleDiscoverMore = () => {
     navigate("/discover-more-2");
   };
@@ -247,67 +247,139 @@ const SecondPage = () => {
         variants={fadeInUp}
       >
         <div className="container mx-auto justify-center w-full">
-          <h2 className=" underline-title-d mx-auto text-4xl font-bold mb-8 text-center text-[#1D3D71] font-yaro">
+          <h2 className="underline-title-d mx-auto text-4xl font-bold mb-8 text-center text-[#1D3D71] font-yaro">
             Download
           </h2>
           <div className="flex flex-col md:flex-row">
             {/* First Card */}
-            <div className=" rounded-tl-2xl bg-red-500 shadow-lg p-8 flex-1 mb-0">
-              <h3 className="text-3xl font-semibold mb-4 text-white">
-                2023 Annual & Sustainability Report Highlights
-              </h3>
-              <p className="mb-4 text-white">
-                Discover our key achievements and sustainability efforts in 2023
-              </p>
-              <button className="bg-white text-red-600 px-4 py-2 rounded-lg transition duration-300 hover:bg-gray-100">
-                <Download className="w-5 h-5 inline-block mr-2" />
-                Download
-              </button>
+            <div className="rounded-tl-2xl bg-[#1D3D71] shadow-lg p-3 flex-1 mb-0 flex flex-col justify-between transition-colors duration-300 hover:text-[#1D3D71]">
+              <div>
+                <h3 className="text-3xl font-semibold mb-4 text-white transition-colors duration-300">Well completion</h3>
+                <p className="mb-4 text-white transition-colors duration-300">Discover our key achievements and sustainability efforts in 2023</p>
+              </div>
+              <div>
+                <div className="bg-black flex justify-between items-center rounded-lg mt-0.5">
+                  <p className="bg-black text-[12px] text-white ml-2">Brocher-Well-Head Bypass Tool.pdf</p>
+                  <button className="bg-black text-[10px] text-blue-400 px-1 py-1 rounded-lg transition duration-300">
+                    <Download className="w-3 h-5 inline-block mr-2" />
+                    Download
+                  </button>
+                </div>
+                <div className="bg-black flex justify-between items-center rounded-lg mt-0.5">
+                  <p className="bg-black text-[12px] text-white ml-2">Brocher-Straddle-Stim.pdf</p>
+                  <button className="bg-black text-[10px] text-blue-400 px-1 py-1 rounded-lg transition duration-300">
+                    <Download className="w-3 h-5 inline-block mr-2" />
+                    Download
+                  </button>
+                </div>
+                <div className="bg-black flex justify-between items-center rounded-lg mt-0.5">
+                  <p className="bg-black text-[12px] text-white ml-2">Brocher-HYMA FRAC.pdf</p>
+                  <button className="bg-black text-[10px] text-blue-400 px-1 py-1 rounded-lg transition duration-300">
+                    <Download className="w-3 h-5 inline-block mr-2" />
+                    Download
+                  </button>
+                </div>
+                {/* Repeat for other downloads */}
+              </div>
             </div>
+
             {/* Second Card */}
-            <div className="bg-blue-500 p-6 shadow-lg flex-1 mb-0">
-              <h3 className="text-3xl font-semibold mb-4 text-white">
-                Stakeholder Relations Report
-              </h3>
-              <p className="mb-4 text-white">
-                Learn about our engagement with key stakeholders.
-              </p>
-              <button className="bg-white text-blue-600 px-4 py-2 rounded-lg transition duration-300 hover:bg-gray-100">
-                <Download className="w-5 h-5 inline-block mr-2" />
-                Download
-              </button>
+            <div className="bg-white p-3 shadow-lg flex-1 mb-0 flex flex-col justify-between">
+              <div>
+                <h3 className="text-3xl font-semibold mb-4 text-black">Artificial lift design and installation</h3>
+                <p className="mb-4 text-black">Learn about our engagement with key stakeholders.</p>
+              </div>
+              <div>
+                <div className="bg-black flex justify-between items-center rounded-lg mt-0.5">
+                  <p className="bg-black text-[12px] text-white ml-2">Brocher-Well-Head Bypass Tool.pdf</p>
+                  <button className="bg-black text-[10px] text-blue-400 px-1 py-1 rounded-lg transition duration-300">
+                    <Download className="w-3 h-5 inline-block mr-2" />
+                    Download
+                  </button>
+                </div>
+                <div className="bg-black flex justify-between items-center rounded-lg mt-0.5">
+                  <p className="bg-black text-[12px] text-white ml-2">Brocher-Straddle-Stim.pdf</p>
+                  <button className="bg-black text-[10px] text-blue-400 px-1 py-1 rounded-lg transition duration-300">
+                    <Download className="w-3 h-5 inline-block mr-2" />
+                    Download
+                  </button>
+                </div>
+                <div className="bg-black flex justify-between items-center rounded-lg mt-0.5">
+                  <p className="bg-black text-[12px] text-white ml-2">Brocher-HYMA FRAC.pdf</p>
+                  <button className="bg-black text-[10px] text-blue-400 px-1 py-1 rounded-lg transition duration-300">
+                    <Download className="w-3 h-5 inline-block mr-2" />
+                    Download
+                  </button>
+                </div>
+                {/* Repeat for other downloads */}
+              </div>
             </div>
             {/* Third Card */}
-            <div className=" bg-green-500 shadow-lg p-8 flex-1 mb-0">
-              <h3 className="text-3xl font-semibold mb-4 text-white">
-                Sustainability & Environmental Impact Report
-              </h3>
-              <p className="mb-4 text-white">
-                Explore our environmental initiatives and sustainability
-                projects.
-              </p>
-              <button className="bg-white text-green-600 px-4 py-2 rounded-lg transition duration-300 hover:bg-gray-100">
-                <Download className="w-5 h-5 inline-block mr-2" />
-                Download
-              </button>
+            <div className="bg-[#1D3D71] shadow-lg p-3 flex-1 mb-0 flex flex-col justify-between">
+              <div>
+                <h3 className="text-3xl font-semibold mb-4 text-white">Stimulation rental tools</h3>
+                <p className="mb-4 text-white">Explore our environmental initiatives and sustainability projects.</p>
+              </div>
+              <div>
+                <div className="bg-black flex justify-between items-center rounded-lg mt-0.5">
+                  <p className="bg-black text-[12px] text-white ml-2">Brocher-Well-Head Bypass Tool.pdf</p>
+                  <button className="bg-black text-[10px] text-blue-400 px-1 py-1 rounded-lg transition duration-300">
+                    <Download className="w-3 h-5 inline-block mr-2" />
+                    Download
+                  </button>
+                </div>
+                <div className="bg-black flex justify-between items-center rounded-lg mt-0.5">
+                  <p className="bg-black text-[12px] text-white ml-2">Brocher-Straddle-Stim.pdf</p>
+                  <button className="bg-black text-[10px] text-blue-400 px-1 py-1 rounded-lg transition duration-300">
+                    <Download className="w-3 h-5 inline-block mr-2" />
+                    Download
+                  </button>
+                </div>
+                <div className="bg-black flex justify-between items-center rounded-lg mt-0.5">
+                  <p className="bg-black text-[12px] text-white ml-2">Brocher-HYMA FRAC.pdf</p>
+                  <button className="bg-black text-[10px] text-blue-400 px-1 py-1 rounded-lg transition duration-300">
+                    <Download className="w-3 h-5 inline-block mr-2" />
+                    Download
+                  </button>
+                </div>
+                {/* Repeat for other downloads */}
+              </div>
             </div>
-            {/* fourth Card */}
-            <div className=" rounded-tr-2xl bg-yellow-500 shadow-lg p-8 flex-1 mb-0">
-              <h3 className="text-3xl font-semibold mb-4 text-white">
-                Environmental & Sustainability Impact Report
-              </h3>
-              <p className="mb-4 text-white">
-                our environmental initiatives and sustainability
-                projects.
-              </p>
-              <button className="bg-white text-yellow-600 px-4 py-2 rounded-lg transition duration-300 hover:bg-gray-100">
-                <Download className="w-5 h-5 inline-block mr-2" />
-                Download
-              </button>
+            {/* Fourth Card */}
+            <div className="rounded-tr-2xl bg-white shadow-lg p-3 flex-1 mb-0 flex flex-col justify-between">
+              <div>
+                <h3 className="text-3xl font-semibold mb-4 text-black">Well Fishing and Remedial</h3>
+                <p className="mb-4 text-black">Our environmental initiatives and sustainability projects.</p>
+              </div>
+              <div>
+                <div className="bg-black flex justify-between items-center rounded-lg mt-0.5">
+                  <p className="bg-black text-[12px] text-white ml-2">Brocher-Well-Head Bypass Tool.pdf</p>
+                  <button className="bg-black text-[10px] text-blue-400 px-1 py-1 rounded-lg transition duration-300">
+                    <Download className="w-3 h-5 inline-block mr-2" />
+                    Download
+                  </button>
+                </div>
+                <div className="bg-black flex justify-between items-center rounded-lg mt-0.5">
+                  <p className="bg-black text-[12px] text-white ml-2">Brocher-Straddle-Stim.pdf</p>
+                  <button className="bg-black text-[10px] text-blue-400 px-1 py-1 rounded-lg transition duration-300">
+                    <Download className="w-3 h-5 inline-block mr-2" />
+                    Download
+                  </button>
+                </div>
+                <div className="bg-black flex justify-between items-center rounded-lg mt-0.5">
+                  <p className="bg-black text-[12px] text-white ml-2">Brocher-HYMA FRAC.pdf</p>
+                  <button className="bg-black text-[10px] text-blue-400 px-1 py-1 rounded-lg transition duration-300">
+                    <Download className="w-3 h-5 inline-block mr-2" />
+                    Download
+                  </button>
+                </div>
+                {/* Repeat for other downloads */}
+              </div>
             </div>
           </div>
         </div>
       </motion.section>
+
     </div>
   );
 };
