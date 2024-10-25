@@ -12,18 +12,31 @@ const Navbar = () => {
       </div>
       <main className="flex justify-center space-x-8 w-3/4 mr-10">
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/contact">Contact Us</NavLink>
         <NavLink to="/about">About Us</NavLink>
-        <NavLink to="/career">Career</NavLink>
         <NavLink to="/services">Services</NavLink>
+        <NavLink to="/career">Career</NavLink>
+        {/* <NavLink to="/contact">Contact Us</NavLink> */}
+
+
       </main>
       <div className="flex text-2xl items-center justify-center gap-4">
-        <div className="border-2 rounded-full p-2 border-[#1D3D71] -mr-2 cursor-pointer">
-          <img src="linkedin.svg" alt="LinkedIn Icon" className="h-5 w-10" />
-        </div>
-        <div className="border-2 text-nowrap text-sm font-bold text-center cursor-pointer rounded-full p-2 px-6 mr-2 border-[#1D3D71]">
-          Contact Us
-        </div>
+        <a
+          href="https://www.linkedin.com/in/tanishk-chaudhary-a6317b25b/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="border-2 rounded-full p-2 border-[#1D3D71] -mr-2 cursor-pointer">
+            <img src="linkedin.svg" alt="LinkedIn Icon" className="h-5 w-10" />
+          </div>
+        </a>
+
+        <Link to="/contact">
+          <div
+            className="border-2 text-nowrap text-sm font-bold text-center cursor-pointer rounded-full p-2 px-6 mr-2 border-[#1D3D71]"
+          >
+            Contact Us
+          </div>
+        </Link>
       </div>
     </nav>
   );

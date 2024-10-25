@@ -20,13 +20,16 @@ const CareerParallax = () => {
     <div className="relative h-screen overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute top-0 left-0 w-full h-full bg-center bg-cover rounded-t-[50%] mt-36 scale-x-[1.5]"
+        className="relative top-0 left-0 w-full h-full bg-center bg-cover rounded-t-[50%] mt-36 scale-x-[1.5]"
         style={{
           backgroundImage: `url('/Handshake.jpg')`,
         }}
-      />
+      >
+        <div className="absolute inset-0 bg-black opacity-50 rounded-t-[50%]" />
+      </div>
+
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center mt-10 px-6">
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center mt-28 px-6">
         <h2 className="text-white text-[36px] font-bold mb-4 font-yaro">
           | Career
         </h2>
@@ -35,9 +38,8 @@ const CareerParallax = () => {
         </h3>
         <p className="text-white text-[18px] font-medium leading-7 mb-8 max-w-2xl">
           Join a dynamic team of experts committed to delivering cutting-edge
-          solutions for the oil and gas industry. Grow your career with us and
-          be part of a company that drives excellence and transforms the
-          industry.
+          solutions for the oil and gas industry. Grow your career with us and be
+          part of a company that drives excellence and transforms the industry.
         </p>
         <Link to="/career">
           <button className="bg-transparent hover:bg-white text-white hover:text-black border-2 border-white font-bold py-3 px-12 rounded-full transition duration-300">

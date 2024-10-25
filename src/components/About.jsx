@@ -143,7 +143,7 @@ const About = () => {
       </div>
       {/* Pillars of Success Section */}
       <AnimatedSection>
-        <div className="w-full flex justify-center py-20">
+        <div className="w-full flex justify-center py-20 -mt-10">
           <div className="max-w-7xl mx-auto text-center text-[#1D3D71] px-4">
             <h2 className="text-[31px] font-bold underline-title mb-8 font-yaro">
               The Pillars of Our Success
@@ -191,26 +191,28 @@ const About = () => {
           </div>
         </div>
       </AnimatedSection>
+
       
-      <div className="w-full pb-[30vw] pt-10 mb-80 bg-[#1D3D71] relative">
+      
+      {/* <div className="w-full pb-[30vw] pt-10 mb-80 bg-[#1D3D71] relative">
         <div className="max-w-7xl mx-auto text-center text-white px-4">
           <h2 className="text-4xl font-bold mb-8 font-yaro ">
             Listen What Our Experts Have To Say
           </h2>
 
-          {/* Video Thumbnail Section */}
-          <AnimatedSection animation={fadeIn3D}>
+          
+          <AnimatedSection animation={fadeIn3D}>     
             <div className="absolute flex justify-center items-center w-full -mt-5">
               <div className="relative top-1/2 left-1/2 mr-52 mt-96 transform -translate-x-1/2 -translate-y-1/2 w-[80%]">
-                {/* Video Thumbnail */}
-                <img
+
+                <img     // Video thumbnail
                   src="/xx.jpeg"
                   alt="Video Thumbnail"
                   className="rounded-lg shadow-lg w-full"
                 />
 
-                {/* Play Button Icon (Center of Video) */}
-                <button
+
+                <button        //Play Button Icon (Center of Video)
                   onClick={toggleModal}
                   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-5xl bg-[#ffcc00] p-6 rounded-full shadow-lg focus:outline-none"
                 >
@@ -220,20 +222,20 @@ const About = () => {
             </div>
           </AnimatedSection>
 
-          {/* Fullscreen Modal for Video */}
-          {isModalOpen && (
+
+          {isModalOpen && (           // Fullscreen Modal for Video
             <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center z-50">
               <div className="relative w-[80vw] h-[80vh]">
-                {/* Close Button */}
-                <button
+                
+                <button     // close button
                   onClick={toggleModal}
                   className="absolute top-4 right-4 text-white text-3xl p-4 z-50"
                 >
                   <FaTimes />
                 </button>
 
-                {/* Fullscreen Video */}
-                <video
+                
+                <video     //Fullscreen Video
                   ref={videoRef}
                   src="https://www.w3schools.com/html/mov_bbb.mp4"
                   className="w-full h-full rounded-lg shadow-lg"
@@ -244,7 +246,7 @@ const About = () => {
             </div>
           )}
         </div>
-      </div>
+      </div>  */}
 
       <div className="w-full bg-[#1D3D71] py-20">
         <div className="max-w-7xl mx-auto text-center text-white px-4">
