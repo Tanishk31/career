@@ -1,4 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FaPlay, FaPause, FaTimes } from "react-icons/fa"; // Font Awesome icons for play/pause
@@ -49,6 +50,8 @@ const staggerChildren = {
   },
 };
 
+
+
 const AnimatedSection = ({ children, animation = fadeInFromBottom }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -66,6 +69,56 @@ const AnimatedSection = ({ children, animation = fadeInFromBottom }) => {
     </motion.div>
   );
 };
+
+const ClientCarousel = () => {
+  const logos = [
+    "/client-logo1.png",
+    "/client-logo2.png",
+    "/client-logo3.png",
+    "/client-logo4.png",
+    "/client-logo5.png",
+    "/client-logo6.png",
+    "/client-logo7.png",
+  ];
+  const [visibleLogos, setVisibleLogos] = useState([0, 1, 2]); // Indices of visible logos
+  const [direction, setDirection] = useState(1);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDirection(1); // Always scroll right in this implementation
+      setVisibleLogos(prevLogos => 
+        prevLogos.map(index => (index + 1) % logos.length)
+      );
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="carousel-container relative w-full overflow-hidden flex justify-center">
+      <div className="flex w-[700px] justify-between"> {/* Adjusted container width */}
+        <AnimatePresence initial={false} custom={direction}>
+          {visibleLogos.map((logoIndex, i) => (
+            <motion.div
+              key={logoIndex}
+              className="mt-6 carousel-card bg-white shadow-lg rounded-lg p-0 mx-3 flex items-center justify-center w-[600px] h-[200px]" // Adjusted card width and height
+              initial={{ x: direction > 0 ? 300 : -300, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: direction > 0 ? 0 : 300, opacity: 0 }}
+              transition={{ duration: 0.1 }}
+            >
+              <img
+                src={logos[logoIndex]}
+                alt={`Company Logo ${logoIndex + 1}`}
+                className="object-contain w-full h-full"
+              />
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </div>
+    </div>
+  );
+};
+
 
 const About = () => {
   const [isModalOpen, setIsModalOpen] = useState(false); // Track modal state
@@ -86,6 +139,7 @@ const About = () => {
     });
   };
 
+  
   return (
     <div className="font-montserrat">
       {/* Landing Section */}
@@ -192,111 +246,19 @@ const About = () => {
         </div>
       </AnimatedSection>
 
-      
-      
-      {/* <div className="w-full pb-[30vw] pt-10 mb-80 bg-[#1D3D71] relative">
-        <div className="max-w-7xl mx-auto text-center text-white px-4">
-          <h2 className="text-4xl font-bold mb-8 font-yaro ">
-            Listen What Our Experts Have To Say
-          </h2>
-
-          
-          <AnimatedSection animation={fadeIn3D}>     
-            <div className="absolute flex justify-center items-center w-full -mt-5">
-              <div className="relative top-1/2 left-1/2 mr-52 mt-96 transform -translate-x-1/2 -translate-y-1/2 w-[80%]">
-
-                <img     // Video thumbnail
-                  src="/xx.jpeg"
-                  alt="Video Thumbnail"
-                  className="rounded-lg shadow-lg w-full"
-                />
-
-
-                <button        //Play Button Icon (Center of Video)
-                  onClick={toggleModal}
-                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-5xl bg-[#ffcc00] p-6 rounded-full shadow-lg focus:outline-none"
-                >
-                  <FaPlay />
-                </button>
-              </div>
-            </div>
-          </AnimatedSection>
-
-
-          {isModalOpen && (           // Fullscreen Modal for Video
-            <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center z-50">
-              <div className="relative w-[80vw] h-[80vh]">
-                
-                <button     // close button
-                  onClick={toggleModal}
-                  className="absolute top-4 right-4 text-white text-3xl p-4 z-50"
-                >
-                  <FaTimes />
-                </button>
-
-                
-                <video     //Fullscreen Video
-                  ref={videoRef}
-                  src="https://www.w3schools.com/html/mov_bbb.mp4"
-                  className="w-full h-full rounded-lg shadow-lg"
-                  controls
-                  autoPlay
-                />
-              </div>
-            </div>
-          )}
-        </div>
-      </div>  */}
-
-      <div className="w-full bg-[#1D3D71] py-20">
+    <div className="w-full bg-[#1D3D71] py-20">
         <div className="max-w-7xl mx-auto text-center text-white px-4">
           <AnimatedSection animation={slideInFromBottom}>
             <h2 className="text-[34px] font-bold underline-title-white mb-8 font-yaro">
-              What Our Clients Say
+              Our Clients 
             </h2>
           </AnimatedSection>
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            variants={staggerChildren}
-          >
-            {[
-              {
-                name: "Joseph from Denmark",
-                img: "https://randomuser.me/api/portraits/men/32.jpg",
-              },
-              {
-                name: "Jade from USA",
-                img: "https://randomuser.me/api/portraits/women/32.jpg",
-              },
-              {
-                name: "Xin Paul from Singapore",
-                img: "https://randomuser.me/api/portraits/men/33.jpg",
-              },
-            ].map((client, index) => (
-              <motion.div
-                key={index}
-                className="bg-[#00B3FF26] text-white p-6 rounded-lg shadow-lg"
-                variants={fadeIn}
-                whileHover={{ scale: 1.05, backgroundColor: "#00B3FF40" }}
-              >
-                <p className="text-gray-300 text-[16px] font-normal">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Proin consequat, risus vitae scelerisque tincidunt, purus
-                  turpis cursus erat, vel faucibus ligula lorem nec lectus."
-                </p>
-                <div className="mt-4 flex flex-col items-center">
-                  <img
-                    src={client.img}
-                    alt={client.name}
-                    className="w-12 h-12 rounded-full mb-2 shadow-md"
-                  />
-                  <p className="text-[18px] font-normal text-white ">{client.name}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
         </div>
+        <ClientCarousel/>
       </div>
+
+
+            
     </div>
   );
 };

@@ -108,6 +108,7 @@
 
 
 import React, { useRef } from 'react';
+import { Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { products } from "../../data.js"; // Adjust this path to the products data array
 
@@ -145,7 +146,7 @@ const EnhancedCarousel = () => {
       variants={fadeInUp}
     >
       <div className="mx-auto px-6 -mt-10">
-        
+
         <div className="mx-auto w-[90%] grid grid-cols-1 md:grid-cols-3 gap-x-9 gap-y-9">
           {products.map((product, index) => (
             <motion.div
@@ -167,19 +168,34 @@ const EnhancedCarousel = () => {
                   {product.description}
                 </p>
               </div>
-              <div className="px-6 pb-6 mt-4">
-                <a
-                  href="#"
-                  className="text-blue-600 font-medium hover:text-blue-500 text-lg"
-                >
-                  Discover More →
-                </a>
+              <div>
+                <div className="flex justify-between items-center rounded-lg mt-4">
+                  <p className=" font-medium text-[#1D3D71] text-[12px] ml-2">Brocher-Well-Head Bypass Tool.pdf</p>
+                  <button className="text-[10px] text-blue-400 px-1 py-1 rounded-lg transition duration-300">
+                    <Download className="w-3 h-5 inline-block mr-1" />
+                    Download
+                  </button>
+                </div>
+                <div className="flex justify-between items-center rounded-lg mt-0.5">
+                  <p className="font-medium text-[12px] text-[#1D3D71] ml-2">Brocher-Straddle-Stim.pdf</p>
+                  <button className="text-[10px] text-blue-400 px-1 py-1 rounded-lg transition duration-300">
+                    <Download className="w-3 h-5 inline-block mr-1" />
+                    Download
+                  </button>
+                </div>
+                <div className="flex justify-between items-center rounded-lg mt-0.5">
+                  <p className="font-medium text-[12px] text-[#1D3D71] ml-2">Brocher-HYMA FRAC.pdf</p>
+                  <button className="text-[10px] text-blue-400 px-1 py-1 rounded-lg transition duration-300">
+                    <Download className="w-3 h-5 inline-block mr-1" />
+                    Download
+                  </button>
+                </div>
               </div>
             </motion.div>
           ))}
-        </div>
       </div>
-    </motion.section>
+    </div>
+    </motion.section >
 
   );
 };
